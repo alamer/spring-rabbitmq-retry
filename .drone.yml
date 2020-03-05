@@ -1,0 +1,14 @@
+---
+kind: pipeline
+type: docker
+name: build spring-rabbitmq-retry
+
+steps:
+  - name: send telegram notification
+    image: appleboy/drone-telegram
+    environment:
+      TG_TOKEN:
+        from_secret: TG_TOKEN
+    settings:
+      token: TG_TOKEN
+      to: @dronecialert
