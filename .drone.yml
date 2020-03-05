@@ -10,5 +10,5 @@ steps:
       TG_TOKEN:
         from_secret: TG_TOKEN
     settings:
-      token: TG_TOKEN
+      token: ${TG_TOKEN}
       to: "@dronecialert"
